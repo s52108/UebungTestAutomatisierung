@@ -3,10 +3,12 @@ package org.campus02;
 import java.util.ArrayList;
 
 public class PersonManager {
-    private ArrayList<Person> persons;
+    public ArrayList<Person> persons;
 
+    public PersonManager(){
+        persons = new ArrayList<>();
+    }
     public void addPerson(Person p) {
-        //this.persons.add(p);
         persons.add(p);
     }
 

@@ -16,9 +16,11 @@ public class Person {
 
 	public Person(String firstname, String lastname, char gender, int age, String country, int salary, String eyeColor, int weight, int size) {
 		this.firstname = firstname;
+		this.lastname = lastname;
 		this.gender = gender;
 		this.age = age;
 		this.country = country;
+		this.salary = salary;
 		this.weight = weight;
 		this.size = size;
 		setEyeColor(eyeColor);
@@ -81,10 +83,11 @@ public class Person {
 	public void setEyeColor(String eyeColor) {
 		// switch-case Anweisung
 		switch (eyeColor) {
-			case "braun":
-			case "blau":
-			case "grün":
+			case "brown":
+			case "blue":
+			case "green":
 				this.eyeColor = eyeColor;
+				break;
 			default:
 				this.eyeColor = "undefined";
 				break;

@@ -17,6 +17,7 @@ public class MaxSalaryAnalyzer extends PersonAnalyzer {
         for (Person person : super.getPersons()) {
             if (person.getSalary() > highestSalary) {
                 personsWithHighestSalary.clear(); // zuerst leeren, da personen mit niedrigerem gehalt drinnen sein könnten;
+                highestSalary = person.getSalary();
                 personsWithHighestSalary.add(person);
             } else if (person.getSalary() == highestSalary) {
                 personsWithHighestSalary.add(person);
