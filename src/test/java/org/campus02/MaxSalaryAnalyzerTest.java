@@ -1,7 +1,5 @@
-package org.campus02.test;
+package org.campus02;
 
-import org.campus02.MaxSalaryAnalyzer;
-import org.campus02.Person;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 class MaxSalaryAnalyzerTest {
-
     Person person1;
     Person person2;
     Person person3;
@@ -54,4 +52,5 @@ class MaxSalaryAnalyzerTest {
         Assertions.assertEquals(person3, personWithHighestSalary);
 
     }
+
 }

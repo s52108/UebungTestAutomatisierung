@@ -1,12 +1,12 @@
-package org.campus02.test;
+package org.campus02;
 
-import org.campus02.Person;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class PersonTest {
+import static org.junit.jupiter.api.Assertions.*;
 
+class PersonTest {
     Person person;
 
     @BeforeEach
@@ -24,9 +24,10 @@ class PersonTest {
         Assertions.assertEquals("brown", person.getEyeColor());
         Assertions.assertEquals(85, person.getWeight());
         Assertions.assertEquals(187, person.getSize());
-        }
+    }
 
     @Test
     void setEyeColor() {
     }
+
 }

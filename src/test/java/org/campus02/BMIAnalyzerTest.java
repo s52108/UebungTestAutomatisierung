@@ -1,15 +1,14 @@
-package org.campus02.test;
+package org.campus02;
 
-import org.campus02.BMIAnalyzer;
-import org.campus02.Person;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-class BMIAnalyzerTest {
+import static org.junit.jupiter.api.Assertions.*;
 
+class BMIAnalyzerTest {
     Person person1;
     Person person2;
     Person person3;
@@ -34,4 +33,5 @@ class BMIAnalyzerTest {
 
         Assertions.assertEquals(23.37, bmiAnalyzer.calcBmi(person1), 0.01);
     }
+
 }

@@ -1,15 +1,14 @@
-package org.campus02.test;
+package org.campus02;
 
-import org.campus02.Person;
-import org.campus02.PersonManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-class PersonManagerTest {
+import static org.junit.jupiter.api.Assertions.*;
 
+class PersonManagerTest {
     PersonManager pm = new PersonManager();
     Person person1 = new Person("John", "Doe", 'M', 25, "USA", 30000, "brown", 75, 180);
     Person person2 = new Person("Jane", "Doe", 'F', 22, "Canada", 25000, "blue", 60, 170);
