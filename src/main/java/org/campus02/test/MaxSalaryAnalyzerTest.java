@@ -9,7 +9,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+
 import static org.junit.jupiter.api.Assertions.*;
+
 
 class MaxSalaryAnalyzerTest {
 
@@ -21,14 +23,18 @@ class MaxSalaryAnalyzerTest {
 
     @BeforeEach
     void setUp() {
-        person1 = new Person("Adolf Simon", "Postl", 'M', 27, "AUT", 5000, "blue", 80, 185);
-        person2 = new Person("Petra", "Nagl", 'W', 26, "AUT", 4000, "brown", 70, 165);
-        person3 = new Person("Daniel", "Sattler", 'M', 33, "AUT", 5000, "brown", 78, 180);
+
+        person1 = new Person("Adolf Simon", "Postl", 'M', 27, "AUT", 4000, "blue", 80, 185);
+        person2 = new Person("Petra", "Nagl", 'W', 26, "AUT", 5000, "brown", 70, 165);
+        person3 = new Person("Daniel", "Sattler", 'M', 33, "AUT", 6000, "brown", 78, 180);
+
+
 
         persons.add(person1);
         persons.add(person2);
         persons.add(person3);
     }
+
     /**
      * check personsWithHighestSalary
      */
@@ -40,8 +46,15 @@ class MaxSalaryAnalyzerTest {
 
         HashSet<Person> personsWithHighestSalary = maxSalaryAnalyzer.getPersonsWithHighestSalary();
 
-        Assertions.assertEquals(2,personsWithHighestSalary.size());
-        Assertions.assertTrue(personsWithHighestSalary.contains(person1));
+
+        Assertions.assertEquals(1,personsWithHighestSalary.size());
+
         Assertions.assertTrue(personsWithHighestSalary.contains(person3));
+
+        Person personWithHighestSalary = new ArrayList<>(personsWithHighestSalary).get(0);
+
+        Assertions.assertEquals(1, personsWithHighestSalary.size());
+        Assertions.assertEquals(person3, personWithHighestSalary);
+
     }
 }

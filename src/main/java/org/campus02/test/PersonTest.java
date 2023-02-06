@@ -26,7 +26,8 @@ class PersonTest {
         Assertions.assertEquals("brown", person.getEyeColor());
         Assertions.assertEquals(85, person.getWeight());
         Assertions.assertEquals(187, person.getSize());
-    }
+        }
+
     @Test
     void setEyeColor() {
     }
